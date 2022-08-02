@@ -1,8 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-// const { } = require('./middlewares/validationTalker');
+// const { validationEmail } = require('./middlewares/validationTalker');
 const { getTalker } = require('./fsTalker');
+const generateToken = require('./generateToken');
 
 const app = express();
 app.use(bodyParser.json());
@@ -36,6 +37,10 @@ app.get('/talker/:id', async (req, res) => {
   } catch (error) {
     res.status(404).json({ message: error.message });
   }
+});
+
+app.post('/login', (_req, res) => {
+  res.status(200).json({ token: generateToken() }); 
 });
 
 app.listen(PORT, () => {

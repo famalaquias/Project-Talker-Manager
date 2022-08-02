@@ -1,4 +1,4 @@
-// const validationProductName = (req, res, next) => {
+// const validationEmail = (req, res, next) => {
 //   const { productName } = req.body;
 
 //   try{ 
@@ -12,6 +12,5 @@
 // };
 
 // module.exports = {
-//   getTalker,
-//   setGetTalker,
+//   validationEmail,
 // };
