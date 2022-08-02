@@ -1,16 +1,31 @@
-// const validationEmail = (req, res, next) => {
-//   const { productName } = req.body;
+const validationEmail = (req, res, next) => {
+  const { email } = req.body;
+  const emailRegex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i;
+ 
+  if (!email) {
+    return res.status(400).json({ message: 'O campo "email" é obrigatório' });
+  }
+  if (!emailRegex.test(email)) {
+    return res.status(400).json({ message: 'O "email" deve ter o formato "email@email.com"' });
+  } 
 
-//   try{ 
-//     if (!productName) throw new Error('O campo productName é obrigatório');
+  next();
+};
 
-//     if (productName.length <= 4) throw new Error('O campo productName deve ter pelo menos 4 caracteres');
-//   } catch(err) {
-//     return res.status(400).json({ message: err.message });
-//   }
-//   next();
-// };
+const validationPassword = (req, res, next) => {
+  const { password } = req.body;
 
-// module.exports = {
-//   validationEmail,
-// };
+  if (!password) {
+    return res.status(400).json({ message: 'O campo "password" é obrigatório' });
+  }  
+  if (password.length < 6) {
+    return res.status(400).json({ message: 'O "password" deve ter pelo menos 6 caracteres' });
+  }
+
+  next();
+};
+
+module.exports = {
+  validationEmail,
+  validationPassword,
+};
