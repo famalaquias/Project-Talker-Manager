@@ -52,14 +52,15 @@ app.post('/login', validationEmail, validationPassword, (_req, res) => {
   res.status(200).json({ token: generateToken() }); 
 });
 
-app.post(
-  '/talker', 
+app.use(
   validationToken, 
   validationName,
   validationAge,
   validationTalkWatchedAt,
   validationTalkRate,
-  async (req, res) => {
+);
+
+app.post('/talker', async (req, res) => {
     const { name, age, talk } = req.body;
     const person = await getTalker();
     try {
@@ -74,8 +75,22 @@ app.post(
     } catch (err) {
       return res.status(401).json({ message: err.message });      
     }
-},
-);
+});
+
+app.put('/talker/:id', async (req, res) => {
+  const { id } = req.params;
+  const { name, age, talk } = req.body;
+
+  const person = await getTalker();
+  const personTalker = person.find((index) => index.id === Number(id));
+
+  const newPerson = { id: Number(id), name, age, talk };
+  person[person.indexOf(personTalker)] = newPerson;
+
+  await setGetTalker(person);
+
+  return res.status(200).json(newPerson); 
+});
 
 app.listen(PORT, () => {
   console.log('Online');
