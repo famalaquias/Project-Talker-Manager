@@ -63,6 +63,16 @@ app.post('/login', validationEmail, validationPassword, (_req, res) => {
   res.status(200).json({ token: generateToken() }); 
 });
 
+app.delete('/talker/:id', validationToken, async (req, res) => {
+  const { id } = req.params;
+  const person = await getTalker();
+
+  const personTalker = person.filter((index) => index.id !== Number(id));
+  res.status(204).end(); 
+
+  await setGetTalker(personTalker);
+});
+
 app.use(
   validationToken, 
   validationName,
@@ -101,16 +111,6 @@ app.put('/talker/:id', async (req, res) => {
   await setGetTalker(person);
 
   return res.status(200).json(newPerson); 
-});
-
-app.delete('/talker/:id', async (req, res) => {
-  const { id } = req.params;
-  const person = await getTalker();
-
-  const personTalker = person.filter((index) => index.id !== Number(id));
-  res.status(204).end(); 
-
-  await setGetTalker(personTalker);
 });
 
 app.listen(PORT, () => {
