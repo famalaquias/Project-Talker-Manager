@@ -36,6 +36,17 @@ app.get('/talker', async (_req, res) => {
   }
 });
 
+app.get('/talker/search', validationToken, async (req, res) => {
+  const { q } = req.query;
+  const talker = await getTalker();
+  if (!q || q === '') {
+    return res.status(200).json(talker);
+  } 
+
+  const searchFilterTalker = talker.filter((index) => index.name.includes(q));
+  res.status(200).json(searchFilterTalker);
+});
+
 app.get('/talker/:id', async (req, res) => {
   try {
     const { id } = req.params;
@@ -90,6 +101,16 @@ app.put('/talker/:id', async (req, res) => {
   await setGetTalker(person);
 
   return res.status(200).json(newPerson); 
+});
+
+app.delete('/talker/:id', async (req, res) => {
+  const { id } = req.params;
+  const person = await getTalker();
+
+  const personTalker = person.filter((index) => index.id !== Number(id));
+  res.status(204).end(); 
+
+  await setGetTalker(personTalker);
 });
 
 app.listen(PORT, () => {
