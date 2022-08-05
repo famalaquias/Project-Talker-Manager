@@ -7,7 +7,7 @@ O projeto consiste em uma aplicação Express usando Middlewares, onde construir
 ## :man_technologist: Habilidades Desenvolvidas
 
 * Desenvolver uma API de um CRUD (Create/Criar, Read/Ler, Update/Atualizar e Delete/Deletar)
-* Desenvolver endpoints que irão ler e escrever em um arquivo utilizando o módulo fs.
+* Desenvolver endpoints que irão ler e escrever em um arquivo utilizando o módulo fs
 * Criar uma aplicação Express.js
 * Usar o Node.js
 * Criar Middlewares
