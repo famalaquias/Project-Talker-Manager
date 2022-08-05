@@ -18,3 +18,5 @@ O projeto consiste em uma aplicação Express usando Middlewares, onde construir
 * Fs Modules
 * Body Parser
 * Crypto
+
+## ⚠️ Instruções para executar o Projeto
