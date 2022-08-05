@@ -45,4 +45,14 @@ O projeto consiste em uma aplicação Express usando Middlewares, onde construir
 <br />
 </details>
 
+<details>
+  <summary markdown="span"><strong> :computer: Localmente</strong></summary><br />
+  
+  É necessário ter a ferramente Node, obrigatoriamente, instaladoa em seu computador (espera-se que a versão utilizada seja a 16).
+ 
+  *<i> Instale as dependências, caso existam, com o comando:</i> <b> npm install </b>
+    
+<br />
+</details>
+
 
