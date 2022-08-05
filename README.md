@@ -31,7 +31,7 @@ O projeto consiste em uma aplicação Express usando Middlewares, onde construir
 
   É necessário ter a ferramenta Docker instalada.
   
-  *<i> Rode o serviço node com o comando:</i> <b> docker-compose up -d </b>
+  <i> *Rode o serviço node com o comando:</i> <b> docker-compose up -d </b>
   
   Esse serviço irá inicializar um container chamado talker_manager.
   A partir daqui você pode rodar o container via CLI ou abri-lo no VS Code.
