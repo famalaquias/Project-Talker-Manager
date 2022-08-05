@@ -13,10 +13,24 @@ O projeto consiste em uma aplicação Express usando Middlewares, onde construir
 * Criar Middlewares
 
 ## :hammer_and_wrench: Ferramentas Utilizadas
+
 * Node.js
 * Express
 * Fs Modules
 * Body Parser
 * Crypto
 
-## ⚠️ Instruções para executar o Projeto
+## ⚠️ Instruções para a Execução do Projeto
+
+1. Clone o repositório do projeto em sua máquina: git@github.com:famalaquias/talker-manager.git
+
+2. Rodar a aplicação no Docker ou Localmente 
+
+<details>
+  <summary markdown="span"><strong> :whale: Docker</strong></summary><br />
+
+  É necessário ter a ferramenta Docker instalada.
+<br />
+</details>
+
+
