@@ -37,7 +37,7 @@ O projeto consiste em uma aplicação Express usando Middlewares, onde construir
   A partir daqui você pode rodar o container via CLI ou abri-lo no VS Code.
   
   *<i> Use o comando:</i> <b> docker exec -it talker_manager bash </b>
-  <br />
+  
   Ele te dará acesso ao terminal interativo do container criado pelo compose, que está rodando em segundo plano.
   
   *<i> Instale as dependências, caso existam, com o comando:</i> <b> npm install </b>
