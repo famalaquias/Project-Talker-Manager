@@ -12,4 +12,9 @@ O projeto consiste em uma aplicação Express usando Middlewares, onde construir
 * Usar o Node.js
 * Criar Middlewares
 
-## :hammer_and_wrench: Ferramentas e Bibliotecas Utilizadas
+## :hammer_and_wrench: Ferramentas Utilizadas
+* Node.js
+* Express
+* Fs Modules
+* Body Parser
+* Crypto
