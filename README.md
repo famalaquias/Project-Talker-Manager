@@ -31,7 +31,7 @@ O projeto consiste em uma aplicação Express usando Middlewares, onde construir
 
   É necessário ter a ferramenta Docker instalada.
   
-  Rode o serviço node com o comando: <b> docker-compose up -d </b>
+  <i> Rode o serviço node com o comando:</i> <b> docker-compose up -d </b>
 <br />
 </details>
 
