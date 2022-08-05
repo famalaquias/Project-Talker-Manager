@@ -54,5 +54,3 @@ O projeto consiste em uma aplicação Express usando Middlewares, onde construir
     
 <br />
 </details>
-
-
